@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nos Huiles - Éclats d'Orient</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Éclats d'Orient</div>
+            <button class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <div class="nav-links">
+                <a href="index.html">Accueil</a>
+                <a href="huiles.html" class="active">Nos Huiles</a>
+                <a href="about.html">À Propos</a>
+                <a href="index.html#contact">Contact</a>
+                <a href="panier.html" class="cart-link">
+                    <span class="cart-icon">🛒</span>
+                    <span id="cart-count">0</span>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="products" id="produits">
+        <h2>Nos Huiles</h2>
+        <div class="product-grid">
+            <a href="huile-argan.html" class="product-card">
+                <img src="../images/huile1.jpg" alt="Huile d'Argan" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Huile d'Argan Pure</h3>
+                    <p class="product-description">Huile précieuse aux propriétés nourrissantes</p>
+                    <span class="product-price">29.99 CHF</span>
+                </div>
+            </a>
+            <a href="huile-jojoba.html" class="product-card">
+                <img src="../images/huile3.jpg" alt="Huile de Jojoba" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Huile de Jojoba</h3>
+                    <p class="product-description">Hydrate et revitalise la peau et les cheveux</p>
+                    <span class="product-price">24.99 CHF</span>
+                </div>
+            </a>
+            <div class="product-card coming-soon">
+                <div class="coming-soon-content">
+                    <i class="fas fa-hourglass-half"></i>
+                    <h3 class="product-title">Nouveaux Produits</h3>
+                    <p class="product-description">D'autres huiles précieuses arrivent bientôt...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p class="contact-info"><i class="fas fa-envelope"></i> contact@eclatsdorient.com</p>
+                <p class="contact-info"><i class="fas fa-phone"></i> +33 (0)1 23 45 67 89</p>
+            </div>
+            <div class="footer-section">
+                <h3>Suivez-nous</h3>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-pinterest"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Informations</h3>
+                <p><a href="#">Conditions générales de vente</a></p>
+                <p><a href="#">Politique de confidentialité</a></p>
+                <p><a href="#">Mentions légales</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Éclats d'Orient. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="../js/cart.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>

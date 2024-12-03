@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Huile d'Argan Pure Bio - Éclats d'Orient</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Éclats d'Orient</div>
+            <button class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <div class="nav-links">
+                <a href="../index.html">Accueil</a>
+                <a href="huiles.html">Nos Huiles</a>
+                <a href="about.html">À Propos</a>
+                <a href="#contact">Contact</a>
+                <a href="./panier.html" class="cart-link">
+                    <span class="cart-icon">🛒</span>
+                    <span id="cart-count">0</span>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="product-detail">
+            <div class="product-gallery">
+                <img src="../images/argan-1.jpg" alt="Huile d'Argan" class="main-image">
+                <div class="thumbnail-container">
+                    <img src="../images/argan-2.jpg" alt="Huile d'Argan détail" class="thumbnail">
+                    <img src="../images/argan-3.jpg" alt="Huile d'Argan utilisation" class="thumbnail">
+                </div>
+            </div>
+            
+            <div class="product-info">
+                <h1>Huile d'Argan Pure Bio</h1>
+                <p class="product-description">
+                    Découvrez le trésor ancestral du Maroc : notre huile d'argan pure et biologique, extraite à froid des noix d'arganier. Riche en vitamine E et en acides gras essentiels, cette huile précieuse est reconnue pour ses propriétés nourrissantes, régénérantes et anti-âge exceptionnelles.
+                </p>
+                <div class="purchase-options">
+                    <div class="price-cart">
+                        <p class="product-price">29,99 CHF TTC</p>
+                        <button class="add-to-cart" 
+                            data-id="argan" 
+                            data-name="Huile d'Argan" 
+                            data-price="29.99">Ajouter au panier</button>
+                    </div>
+                    <div class="quantity-control">
+                        <button type="button" class="quantity-btn minus">-</button>
+                        <input type="number" id="quantity" name="quantity" min="1" value="1">
+                        <button type="button" class="quantity-btn plus">+</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="benefits-grid">
+            <div class="benefit-card">
+                <i class="fas fa-star"></i>
+                <h4>Anti-Âge Naturel</h4>
+                <p>Riche en antioxydants et en vitamine E, elle combat efficacement les signes du vieillissement.</p>
+            </div>
+            <div class="benefit-card">
+                <i class="fas fa-tint"></i>
+                <h4>Hydratation Intense</h4>
+                <p>Nourrit en profondeur la peau et les cheveux sans laisser de film gras.</p>
+            </div>
+            <div class="benefit-card">
+                <i class="fas fa-leaf"></i>
+                <h4>100% Pure & Bio</h4>
+                <p>Extraite à froid et certifiée biologique pour préserver tous ses bienfaits.</p>
+            </div>
+        </div>
+
+        <section class="usage-section">
+            <h3>Comment Utiliser l'Huile d'Argan</h3>
+            <div class="usage-grid">
+                <div class="usage-item">
+                    <i class="fas fa-face-smile"></i>
+                    <h4>Soin du Visage</h4>
+                    <p>Appliquez quelques gouttes sur le visage et le cou pour une peau éclatante et protégée.</p>
+                </div>
+                <div class="usage-item">
+                    <i class="fas fa-spa"></i>
+                    <h4>Soin des Cheveux</h4>
+                    <p>Utilisez comme masque ou sur les pointes pour des cheveux brillants et fortifiés.</p>
+                </div>
+                <div class="usage-item">
+                    <i class="fas fa-hand-holding-heart"></i>
+                    <h4>Soin du Corps</h4>
+                    <p>Massez sur la peau après la douche pour une hydratation optimale.</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="guarantee-badge">
+            <i class="fas fa-award"></i>
+            <div class="guarantee-text">
+                <h4>Qualité Garantie</h4>
+                <p>Nous sélectionnons uniquement les meilleures noix d'argan du Maroc pour vous offrir une huile d'exception.</p>
+            </div>
+        </div>
+
+        <section class="ingredients-section">
+            <h3>Composition</h3>
+            <ul>
+                <li>100% Huile d'Argan (Argania Spinosa) pure et biologique</li>
+                <li>Extraite à froid pour préserver toutes ses propriétés</li>
+                <li>Sans additifs ni conservateurs</li>
+                <li>Non testée sur les animaux</li>
+            </ul>
+        </section>
+    </main>
+
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Votre Panier</h2>
+            <div id="cart-items"></div>
+            <div id="cart-total"></div>
+            <button id="checkout-button">Procéder au paiement</button>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p class="contact-info"><i class="fas fa-envelope"></i> contact@eclatsdorient.com</p>
+                <p class="contact-info"><i class="fas fa-phone"></i> +33 (0)1 23 45 67 89</p>
+            </div>
+            <div class="footer-section">
+                <h3>Suivez-nous</h3>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-pinterest"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Informations</h3>
+                <p><a href="#">Conditions générales de vente</a></p>
+                <p><a href="#">Politique de confidentialité</a></p>
+                <p><a href="#">Mentions légales</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Éclats d'Orient. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Attendre que le DOM soit complètement chargé
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialisation du panier
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            
+            // Mettre à jour le compteur initial
+            updateCartCount();
+
+            // Sélectionner les éléments du DOM
+            const quantityInput = document.getElementById('quantity');
+            const plusButton = document.querySelector('.quantity-btn.plus');
+            const minusButton = document.querySelector('.quantity-btn.minus');
+            const addToCartButton = document.querySelector('.add-to-cart');
+
+            // Gestionnaire pour le bouton plus
+            plusButton.addEventListener('click', function() {
+                let currentValue = parseInt(quantityInput.value) || 1;
+                quantityInput.value = currentValue + 1;
+            });
+
+            // Gestionnaire pour le bouton moins
+            minusButton.addEventListener('click', function() {
+                let currentValue = parseInt(quantityInput.value) || 1;
+                if (currentValue > 1) {
+                    quantityInput.value = currentValue - 1;
+                }
+            });
+
+            // Empêcher la saisie de valeurs négatives
+            quantityInput.addEventListener('input', function() {
+                let value = parseInt(this.value) || 1;
+                if (value < 1) value = 1;
+                this.value = value;
+            });
+
+            // Fonction pour afficher la notification
+            function showNotification(message) {
+                // Supprimer l'ancienne notification si elle existe
+                const oldNotification = document.querySelector('.notification');
+                if (oldNotification) {
+                    oldNotification.remove();
+                }
+
+                // Créer la nouvelle notification
+                const notification = document.createElement('div');
+                notification.className = 'notification';
+                notification.textContent = message;
+                document.body.appendChild(notification);
+
+                // Afficher la notification avec animation
+                setTimeout(() => notification.classList.add('show'), 10);
+
+                // Masquer et supprimer la notification après 2 secondes
+                setTimeout(() => {
+                    notification.classList.remove('show');
+                    setTimeout(() => notification.remove(), 300);
+                }, 2000);
+            }
+
+            // Gestion du panier
+            addToCartButton.addEventListener('click', function() {
+                const quantity = parseInt(quantityInput.value) || 1;
+                const productId = this.dataset.id;
+                const productName = this.dataset.name;
+                const productPrice = parseFloat(this.dataset.price);
+
+                // Rechercher si le produit existe déjà dans le panier
+                const existingItemIndex = cart.findIndex(item => item.id === productId);
+
+                if (existingItemIndex !== -1) {
+                    // Si le produit existe, ajouter la nouvelle quantité
+                    cart[existingItemIndex].quantity += quantity;
+                } else {
+                    // Si le produit n'existe pas, l'ajouter au panier
+                    cart.push({
+                        id: productId,
+                        name: productName,
+                        price: productPrice,
+                        quantity: quantity
+                    });
+                }
+
+                // Mettre à jour le localStorage et l'affichage
+                localStorage.setItem('cart', JSON.stringify(cart));
+                updateCartCount();
+
+                // Afficher la notification
+                showNotification(`${quantity} ${productName}${quantity > 1 ? 's' : ''} ajouté${quantity > 1 ? 's' : ''} au panier`);
+
+                // Réinitialiser la quantité à 1 après l'ajout
+                quantityInput.value = 1;
+            });
+
+            function updateCartCount() {
+                const totalItems = cart.reduce((total, item) => total + item.quantity, 0);
+                const cartCount = document.getElementById('cart-count');
+                if (cartCount) {
+                    cartCount.textContent = totalItems;
+                }
+            }
+        });
+    </script>
+    <script src="../js/cart-page.js"></script>
+    <script>
+        // Navigation mobile
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburger = document.querySelector('.hamburger');
+            const navLinks = document.querySelector('.nav-links');
+
+            hamburger.addEventListener('click', function() {
+                navLinks.classList.toggle('active');
+                hamburger.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>

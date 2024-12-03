@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Éclats d'Orient - Huiles Précieuses</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Éclats d'Orient</div>
+            <button class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <div class="nav-links">
+                <a href="#accueil">Accueil</a>
+                <a href="huiles.html">Nos Huiles</a>
+                <a href="about.html">À Propos</a>
+                <a href="#contact">Contact</a>
+                <a href="./panier.html" class="cart-link">
+                    <span class="cart-icon">🛒</span>
+                    <span id="cart-count">0</span>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero" id="accueil">
+        <div class="hero-content" data-aos="fade-up">
+            <h1>Découvrez nos Huiles Précieuses</h1>
+            <p>Des huiles naturelles sélectionnées avec soin pour votre bien-être</p>
+            <a href="huiles.html" class="cta-button">Découvrir nos produits</a>
+        </div>
+    </section>
+
+    <section class="featured-products" data-aos="fade-up">
+        <h2>Nos Produits Phares</h2>
+        <div class="featured-grid">
+            <div class="featured-card" data-aos="fade-up" data-aos-delay="100">
+                <img src="../images/argan-oil.jpg" alt="Huile d'Argan" class="featured-image">
+                <div class="featured-overlay">
+                    <h3 class="featured-title">Huile d'Argan Pure</h3>
+                    <p class="featured-description">L'or liquide du Maroc, riche en vitamine E et antioxydants.</p>
+                    <span class="featured-price">29.99 €</span>
+                </div>
+            </div>
+            <div class="featured-card" data-aos="fade-up" data-aos-delay="200">
+                <img src="../images/jojoba-oil.jpg" alt="Huile de Jojoba" class="featured-image">
+                <div class="featured-overlay">
+                    <h3 class="featured-title">Huile de Jojoba Bio</h3>
+                    <p class="featured-description">Hydratation intense pour votre peau et vos cheveux.</p>
+                    <span class="featured-price">24.99 €</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="benefits" data-aos="fade-up">
+        <div class="benefits-container">
+            <div class="benefit-card" data-aos="fade-up" data-aos-delay="100">
+                <i class="fas fa-medal benefit-icon"></i>
+                <h3 class="benefit-title">Qualité Garantie</h3>
+                <p>Produits certifiés et testés</p>
+            </div>
+            <div class="benefit-card" data-aos="fade-up" data-aos-delay="200">
+                <i class="fas fa-headset benefit-icon"></i>
+                <h3 class="benefit-title">Service Client</h3>
+                <p>Support disponible 7j/7</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="values" data-aos="fade-up">
+        <h2>Nos Valeurs</h2>
+        <div class="values-container">
+            <div class="value-card" data-aos="fade-up" data-aos-delay="100">
+                <i class="fas fa-leaf"></i>
+                <h3>100% Naturel</h3>
+                <p>Des produits purs et naturels, sans additifs</p>
+            </div>
+            <div class="value-card" data-aos="fade-up" data-aos-delay="200">
+                <i class="fas fa-award"></i>
+                <h3>Qualité Premium</h3>
+                <p>Sélection rigoureuse des meilleures huiles</p>
+            </div>
+            <div class="value-card" data-aos="fade-up" data-aos-delay="300">
+                <i class="fas fa-heart"></i>
+                <h3>Bien-être</h3>
+                <p>Pour prendre soin de vous naturellement</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="newsletter" data-aos="fade-up">
+        <div class="newsletter-content">
+            <h2>Restez informé</h2>
+            <p>Inscrivez-vous à notre newsletter pour recevoir nos offres exclusives et nos conseils beauté</p>
+            <form class="newsletter-form">
+                <input type="email" class="newsletter-input" placeholder="Votre adresse email" required>
+                <button type="submit" class="newsletter-button">S'inscrire</button>
+            </form>
+        </div>
+    </section>
+
+    <section class="testimonials" data-aos="fade-up">
+        <h2>Ce que disent nos clients</h2>
+        <div class="testimonials-container">
+            <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p>"Des produits d'une qualité exceptionnelle. Je recommande vivement !"</p>
+                <p class="client-name">- Marie L.</p>
+            </div>
+            <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p>"L'huile d'argan a transformé ma routine beauté. Merci Éclats d'Orient !"</p>
+                <p class="client-name">- Sophie M.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p class="contact-info"><i class="fas fa-envelope"></i> contact@eclatsdorient.com</p>
+                <p class="contact-info"><i class="fas fa-phone"></i> +33 (0)1 23 45 67 89</p>
+            </div>
+            <div class="footer-section">
+                <h3>Suivez-nous</h3>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-pinterest"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Informations</h3>
+                <p><a href="#">Conditions générales de vente</a></p>
+                <p><a href="#">Politique de confidentialité</a></p>
+                <p><a href="#">Mentions légales</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Éclats d'Orient. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+    </script>
+    <script src="../js/cart.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>

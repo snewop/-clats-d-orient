@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paiement - Éclats d'Orient</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Éclats d'Orient</div>
+            <button class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <div class="nav-links">
+                <a href="index.html">Accueil</a>
+                <a href="index.html#produits">Nos Huiles</a>
+                <a href="about.html">À propos</a>
+                <a href="panier.html">Panier 🛒</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="payment-container">
+        <div class="payment-wrapper">
+            <div class="payment-progress">
+                <div class="progress-step completed">
+                    <div class="step-number">1</div>
+                    <div class="step-text">Panier</div>
+                </div>
+                <div class="progress-line"></div>
+                <div class="progress-step active">
+                    <div class="step-number">2</div>
+                    <div class="step-text">Paiement</div>
+                </div>
+                <div class="progress-line"></div>
+                <div class="progress-step">
+                    <div class="step-number">3</div>
+                    <div class="step-text">Confirmation</div>
+                </div>
+            </div>
+
+            <div class="payment-sections">
+                <section class="order-summary">
+                    <h2>Résumé de votre commande</h2>
+                    <div class="order-items" id="order-details">
+                        <!-- Les articles seront ajoutés ici dynamiquement -->
+                    </div>
+                    <div class="order-totals">
+                        <div class="total-line">
+                            <span>Sous-total:</span>
+                            <span id="subtotal">0.00 €</span>
+                        </div>
+                        <div class="total-line">
+                            <span>Livraison:</span>
+                            <span id="shipping">5.00 €</span>
+                        </div>
+                        <div class="total-line total">
+                            <span>Total:</span>
+                            <span id="total-amount">0.00 €</span>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="payment-methods">
+                    <h2>Choisissez votre moyen de paiement</h2>
+                    <div class="payment-options">
+                        <div class="secure-payment">
+                            <img src="../images/secure-payment.png" alt="Paiement sécurisé">
+                            <p>🔒 Paiement 100% sécurisé</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p class="contact-info"><i class="fas fa-envelope"></i> contact@eclatsdorient.com</p>
+                <p class="contact-info"><i class="fas fa-phone"></i> +33 (0)1 23 45 67 89</p>
+            </div>
+            <div class="footer-section">
+                <h3>Suivez-nous</h3>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-pinterest"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Informations</h3>
+                <p><a href="#">Conditions générales de vente</a></p>
+                <p><a href="#">Politique de confidentialité</a></p>
+                <p><a href="#">Mentions légales</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Éclats d'Orient. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/paiement.js"></script>
+</body>
+</html>

@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Huile de Jojoba Pure - Éclats d'Orient</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <style>
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .benefit-card {
+            background: #fff;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .benefit-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .benefit-card i {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        
+        .benefit-card h4 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+        
+        .usage-section {
+            background: linear-gradient(45deg, var(--light-bg), #fff);
+            padding: 4rem 2rem;
+            margin: 4rem 0;
+            border-radius: 20px;
+        }
+        
+        .usage-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .usage-item {
+            text-align: center;
+            padding: 1.5rem;
+        }
+        
+        .usage-item i {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        
+        .guarantee-badge {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 2rem 0;
+            padding: 2rem;
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        .guarantee-badge i {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-right: 1.5rem;
+        }
+        
+        .guarantee-text {
+            font-size: 1.1rem;
+        }
+        
+        .ingredients-section {
+            background: #fff;
+            padding: 3rem;
+            border-radius: 20px;
+            margin: 4rem 0;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        .eco-friendly {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+            padding: 2rem;
+            background: var(--light-bg);
+            border-radius: 15px;
+            margin: 3rem 0;
+        }
+        
+        .eco-friendly i {
+            font-size: 2.5rem;
+            color: #4CAF50;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Éclats d'Orient</div>
+            <button class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <div class="nav-links">
+                <a href="index.html">Accueil</a>
+                <a href="huiles.html">Nos Huiles</a>
+                <a href="about.html">À Propos</a>
+                <a href="index.html#contact">Contact</a>
+                <a href="panier.html" class="cart-link">
+                    <span class="cart-icon">🛒</span>
+                    <span id="cart-count">0</span>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="product-detail full-width">
+        <div class="product-gallery">
+            <img src="../images/huile3.jpg" alt="Huile de Jojoba" class="product-detail-image" id="main-image">
+            <div class="thumbnail-gallery">
+                <img src="../images/huile3.jpg" alt="Huile de Jojoba" class="thumbnail" onclick="switchImage(this)">
+                <img src="../images/huile3_2.jpg" alt="Huile de Jojoba utilisation" class="thumbnail" onclick="switchImage(this)">
+                <img src="../images/huile3_3.jpg" alt="Huile de Jojoba résultats" class="thumbnail" onclick="switchImage(this)">
+            </div>
+        </div>
+        <div class="product-info">
+            <h2 class="product-title">Huile de Jojoba Pure Bio</h2>
+            <div class="eco-friendly">
+                <i class="fas fa-leaf"></i>
+                <p>100% Pure & Biologique - Pressée à froid</p>
+            </div>
+            <p class="product-description">
+                Découvrez le secret de beauté ancestral du désert : notre huile de jojoba pure, extraite avec soin des graines de jojoba cultivées dans des conditions optimales. Cette huile miracle, proche du sébum naturel de la peau, est votre alliée beauté polyvalente pour une peau rayonnante et des cheveux soyeux.
+            </p>
+            <div class="purchase-options">
+                <div class="price-cart">
+                    <p class="product-price">24,99 CHF TTC</p>
+                    <button class="add-to-cart" 
+                        data-id="jojoba" 
+                        data-name="Huile de Jojoba" 
+                        data-price="24,99">Ajouter au panier</button>
+                </div>
+                <div class="quantity-control">
+                    <button type="button" class="quantity-btn minus">-</button>
+                    <input type="number" id="quantity" name="quantity" min="1" value="1">
+                    <button type="button" class="quantity-btn plus">+</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="benefits-grid">
+        <div class="benefit-card">
+            <i class="fas fa-tint"></i>
+            <h4>Hydratation Intense</h4>
+            <p>Pénètre profondément dans la peau pour une hydratation durable sans effet gras</p>
+        </div>
+        <div class="benefit-card">
+            <i class="fas fa-sun"></i>
+            <h4>Anti-Âge Naturel</h4>
+            <p>Riche en antioxydants pour lutter contre les signes du vieillissement</p>
+        </div>
+        <div class="benefit-card">
+            <i class="fas fa-balance-scale"></i>
+            <h4>Équilibre Parfait</h4>
+            <p>Régule la production de sébum pour tous types de peaux</p>
+        </div>
+        <div class="benefit-card">
+            <i class="fas fa-sparkles"></i>
+            <h4>Cheveux Soyeux</h4>
+            <p>Nourrit et fortifie les cheveux de la racine aux pointes</p>
+        </div>
+    </section>
+
+    <section class="usage-section">
+        <h3>Comment utiliser l'huile de jojoba ?</h3>
+        <div class="usage-grid">
+            <div class="usage-item">
+                <i class="fas fa-face-smile"></i>
+                <h4>Soin du Visage</h4>
+                <p>Appliquez quelques gouttes matin et soir sur une peau propre</p>
+            </div>
+            <div class="usage-item">
+                <i class="fas fa-hand-holding-heart"></i>
+                <h4>Soin du Corps</h4>
+                <p>Massez délicatement sur les zones sèches</p>
+            </div>
+            <div class="usage-item">
+                <i class="fas fa-wind"></i>
+                <h4>Soin des Cheveux</h4>
+                <p>En masque ou sur les pointes pour plus de brillance</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="guarantee-badge">
+        <i class="fas fa-award"></i>
+        <div class="guarantee-text">
+            <h4>Garantie Satisfaction 30 Jours</h4>
+            <p>Non satisfait ? Nous vous remboursons intégralement</p>
+        </div>
+    </div>
+
+    <section class="ingredients-section">
+        <h3>Composition</h3>
+        <p>100% Huile de Jojoba (Simmondsia Chinensis) pure et biologique</p>
+        <ul>
+            <li>✓ Sans parfum</li>
+            <li>✓ Sans conservateur</li>
+            <li>✓ Non comédogène</li>
+            <li>✓ Testée dermatologiquement</li>
+            <li>✓ Convient aux peaux sensibles</li>
+        </ul>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p class="contact-info"><i class="fas fa-envelope"></i> contact@eclatsdorient.com</p>
+                <p class="contact-info"><i class="fas fa-phone"></i> +33 (0)1 23 45 67 89</p>
+            </div>
+            <div class="footer-section">
+                <h3>Suivez-nous</h3>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-pinterest"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Informations</h3>
+                <p><a href="#">Conditions générales de vente</a></p>
+                <p><a href="#">Politique de confidentialité</a></p>
+                <p><a href="#">Mentions légales</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Éclats d'Orient. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script>
+        // Gestion des images
+        function switchImage(thumbnail) {
+            const mainImage = document.getElementById('main-image');
+            mainImage.src = thumbnail.src;
+            mainImage.alt = thumbnail.alt;
+        }
+
+        // Gestion du panier
+        document.addEventListener('DOMContentLoaded', function() {
+            const quantityInput = document.getElementById('quantity');
+            const plusButton = document.querySelector('.quantity-btn.plus');
+            const minusButton = document.querySelector('.quantity-btn.minus');
+            const addToCartButton = document.querySelector('.add-to-cart');
+
+            // Gestion des quantités
+            plusButton.addEventListener('click', function() {
+                let currentValue = parseInt(quantityInput.value) || 1;
+                quantityInput.value = currentValue + 1;
+            });
+
+            minusButton.addEventListener('click', function() {
+                let currentValue = parseInt(quantityInput.value) || 1;
+                if (currentValue > 1) {
+                    quantityInput.value = currentValue - 1;
+                }
+            });
+
+            // Empêcher les valeurs négatives
+            quantityInput.addEventListener('input', function() {
+                let value = parseInt(this.value) || 1;
+                if (value < 1) value = 1;
+                this.value = value;
+            });
+
+            // Notification d'ajout au panier
+            function showNotification(message) {
+                const notification = document.createElement('div');
+                notification.className = 'notification';
+                notification.textContent = message;
+                document.body.appendChild(notification);
+
+                setTimeout(() => notification.classList.add('show'), 10);
+                setTimeout(() => {
+                    notification.classList.remove('show');
+                    setTimeout(() => notification.remove(), 300);
+                }, 2000);
+            }
+
+            // Gestion du panier
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            
+            addToCartButton.addEventListener('click', function() {
+                const quantity = parseInt(quantityInput.value) || 1;
+                const productId = this.dataset.id;
+                const productName = this.dataset.name;
+                const productPrice = parseFloat(this.dataset.price);
+
+                const existingItemIndex = cart.findIndex(item => item.id === productId);
+
+                if (existingItemIndex !== -1) {
+                    cart[existingItemIndex].quantity += quantity;
+                } else {
+                    cart.push({
+                        id: productId,
+                        name: productName,
+                        price: productPrice,
+                        quantity: quantity
+                    });
+                }
+
+                localStorage.setItem('cart', JSON.stringify(cart));
+                updateCartCount();
+                showNotification(`${quantity} ${productName}${quantity > 1 ? 's' : ''} ajouté${quantity > 1 ? 's' : ''} au panier`);
+                quantityInput.value = 1;
+            });
+
+            function updateCartCount() {
+                const totalItems = cart.reduce((total, item) => total + item.quantity, 0);
+                const cartCount = document.getElementById('cart-count');
+                if (cartCount) {
+                    cartCount.textContent = totalItems;
+                }
+            }
+
+            // Initialiser le compteur
+            updateCartCount();
+        });
+    </script>
+</body>
+</html>
